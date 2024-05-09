@@ -1,0 +1,45 @@
+redux : single store to store all states.
+
+Time travel debugging. <--It can store to previous state. Click on jump or skip.
+
+Step by step is already there. So it is easy to debug.
+
+Log Rocket tool: Redux dev tool . reload app in same state and tell you what went wrong.
+
+Pros:
+     Predictable state changes.
+     Centralize state
+     easy debugging
+     preserve page state
+     undo/redo
+     echosystem of addons.
+
+Cons:
+    Complexity of code
+    Verbosity <--write some boilter plate code to get things done.
+
+Before using redux: for every project what problem are you trying to solve,
+what constraints are ? , What solution optimize solution according to constraint.
+
+UI Layer [web page for ex button]-> Onclick->Handler function-> Event Dispatch-> Redux store
+-> Dispatch Action to Reducer-> Update the state of store->Update UI->Goes back to UI Layer
+
+Redux: state management library that allow you to manage state globally.
+store: global state accessible across application
+    Contains multiple slices. 
+    for ex counter that is counter state or userstate for whhen user logged in etc.
+
+action:
+    how redux what it shuld do to state. for ex increment or decrement count.
+
+    for ex:
+    const increment ={type:"increment",payload:1};
+    const decrement ={type:"decrement",payload:1};
+
+reducer:
+    responsible for taking an action and go out and make an update in redux store.
+    never directly make an update to store.
+    take state->make copy of state->update in copy state ->and overwrite entire state.
+
+
+Redux devtools for chrome is useful to go back or check actions.
